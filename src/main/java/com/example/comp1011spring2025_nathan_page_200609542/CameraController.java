@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+
 public class CameraController {
     @FXML
     private ComboBox<String> brandList;
