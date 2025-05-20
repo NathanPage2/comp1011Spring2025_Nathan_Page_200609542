@@ -34,9 +34,43 @@ public class CameraController {
     void onCameraListSubmit(ActionEvent event) {
 
     }
+    void initialize() {
 
-    @FXML
-    void onFormSubmit(ActionEvent event) {
+    }
+        @FXML
+        void onFormSubmit(ActionEvent event) {
+
+            System.out.println(txtColor.getText());
+            System.out.println(txtLensLength.getText());
+            System.out.println(txtResolution.getText());
+
+            output.setText(txtColor.getText() + txtLensLength.getText() + txtResolution.getText());
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //@FXML LAB 1
+   /* void onFormSubmit(ActionEvent event) {
 
         //Idk why I could not get it fully working and would love to hear a fix
 
@@ -62,5 +96,5 @@ public class CameraController {
         //This creates a new instance after the user goes through it
         CameraModel camera = new CameraModel(CameraModel.MemoryOptions.GB_64, txtColor.getText(), CameraModel.AvailableBrands.CANON, Double.parseDouble(txtResolution.getText()), Integer.parseInt(txtLensLength.getText()));
     }
+*/
 
-}

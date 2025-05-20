@@ -95,6 +95,7 @@ public class CameraModel {
     }
 
     public List<String> getAllBrands(){
+/* */
 
         return Arrays.asList(Arrays.toString(AvailableBrands.values()));
     }
@@ -103,19 +104,20 @@ public class CameraModel {
 
         return List.of(Arrays.toString(MemoryOptions.values()));
     }
-    public CameraModel() {}
+
+    public CameraModel(){}
 
     public CameraModel(MemoryOptions memory, String color, AvailableBrands brand, double resolution, int lensLength) {
-      /*  Memory = memory;
-        this.color = color;
-        this.brand = brand;
-        this.resolution = resolution;
-        this.lensLength = lensLength;
-        */
-       setMemory(memory);
-       setColor(color);
-       setBrand(brand);
-       setResolution(resolution);
-       setLensLength(lensLength);
+//        Memory = memory;
+//        this.color = color;
+//        this.brand = brand;
+//        this.resolution = resolution;
+//        this.lensLength = lensLength;
+
+        setMemory(memory);
+        setColor(color);
+        setBrand(brand);
+        setResolution(resolution);
+        setLensLength(lensLength);
     }
 }
