@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-
 public class CameraController {
 
     @FXML
@@ -40,7 +39,7 @@ public class CameraController {
     }
 
     @FXML
-    void initialize() {
+    void initialize(){
 
         model.getAllMemoryOptions();
 
@@ -56,38 +55,50 @@ public class CameraController {
                     System.out.println("You selected index:" + cameraList.getSelectionModel().getSelectedIndex());
                     output.setText(cameraList.getSelectionModel().getSelectedItem());
                 }
-
         );
+
+
         //price slider
-       ChangeListener changeListener = (observable, oldValue, newValue) -> {
-           System.out.println("Sld price:" + newValue);
-           System.out.println("old price:" + oldValue);
-       };
-      // sldPrice.valueProperty().addListener(
-             //   (observable, oldValue, newValue) -> {
-                  //  System.out.println("Sld price:" + newValue);
-                  //  System.out.println("old price:" + oldValue);
-              //  }
-       // );
+
+        ChangeListener changeListener = (observable, oldValue, newValue) -> {
+            System.out.println("Price: " + newValue);
+            System.out.println("Old Price: " + oldValue);
+        };
+
+//        sldPrice.valueProperty().addListener(
+//                (observable, oldValue, newValue) -> {
+//                    System.out.println("Price: " + newValue);
+//                    System.out.println("Old Price: " + oldValue);
+//                }
+//        );
 
         //sldPrice.valueProperty().addListener(changeListener);
 
-        //Functional Interface: only one abstarct method
+        //Functional Interface: only 1 abstrace method
 
+
+        //annonymous inner class
         sldPrice.valueProperty().addListener(
 
                 new ChangeListener<Number>() {
                     @Override
-                    public void changed(ObservableValue<? extends Number> observableValue, Number oldValue,
-                                        Number newValue) {
-                        System.out.println("Sld price:" + newValue);
-                        System.out.println("old price:" + oldValue);
+                    public void changed(ObservableValue<?extends Number> obervableValue, Number oldValue,
+                                        Number newValue){
+
+                        System.out.println("Price: " + newValue);
+                        System.out.println("Old Price: " + oldValue);
+
                     }
                 }
+
+
         );
 
 
+        //create a new instance variable in CameraModel: price
+        //once user submits, add the price value to the CameraModel (using setPrice)
     }
+
     @FXML
     void onFormSubmit(ActionEvent event) {
 
@@ -128,50 +139,3 @@ public class CameraController {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //@FXML LAB 1
-   /* void onFormSubmit(ActionEvent event) {
-
-        //Idk why I could not get it fully working and would love to hear a fix
-
-
-//Adding all the different choices for the user
-        brandList.getItems().addAll("CANON", "POLAROID", "SONY");
-       memoryList.getItems().addAll("GB_32", "GB_64", "GB_128");
-
-       //Printing all the different items so they can display in the console
-    System.out.println(txtLensLength.getText());
-    System.out.println(txtResolution.getText());
-    System.out.println(txtColor.getText());
-    System.out.println(brandList.getItems());
-    System.out.println(memoryList.getItems());
-
-    //This line puts it into the box in the form
-    output.setText(txtColor.getText() + txtLensLength.getText() + txtResolution.getText());
-
-    //In theory this should do the same however I could not get it working
-        String memoryItem = memoryList.getItems().toString();
-        String brandItem = brandList.getItems().toString();
-
-        //This creates a new instance after the user goes through it
-        CameraModel camera = new CameraModel(CameraModel.MemoryOptions.GB_64, txtColor.getText(), CameraModel.AvailableBrands.CANON, Double.parseDouble(txtResolution.getText()), Integer.parseInt(txtLensLength.getText()));
-    }
-*/
-
