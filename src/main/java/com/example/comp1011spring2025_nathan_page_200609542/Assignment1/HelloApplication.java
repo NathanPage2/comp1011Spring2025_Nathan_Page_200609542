@@ -1,4 +1,4 @@
-package Assignment1;
+package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
