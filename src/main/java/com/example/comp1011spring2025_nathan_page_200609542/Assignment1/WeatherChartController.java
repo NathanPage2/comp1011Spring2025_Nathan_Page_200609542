@@ -5,6 +5,7 @@ package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
@@ -27,7 +28,8 @@ public class WeatherChartController {
     @FXML
     public void switchToTable(javafx.event.ActionEvent event) {
         try {
-            Stage stage = new Stage();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            //Had to do this to make the logo work on a second stage
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("weather-table-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             stage.setTitle("Table View!");
