@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <!--Done by Nathan Page (200609542)-->
 <!--June 12th, 2025-->
 <!--Simply added some functionality in javafx-->
+
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
@@ -11,12 +14,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<?import java.net.URL?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011spring2025_nathan_page_200609542.Assignment1.WeatherChartController">
-  <stylesheets>
-      <URL value="@style.css"></URL>
-  </stylesheets>
-    <children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011spring2025_nathan_page_200609542.Assignment1.WeatherChartController" stylesheets="@style.css">
+    <!--Had to move the css inside the anchorpane-->
+   <children>
       <BarChart fx:id="chart" prefHeight="400.0" prefWidth="376.0">
         <xAxis>
           <CategoryAxis label="Cities" side="BOTTOM" />
@@ -31,7 +31,7 @@
             <TableColumn fx:id="weatherColumn" prefWidth="75.0" text="Weather" />
             <TableColumn fx:id="specialNotesColumn" prefWidth="75.0" text="Notes" />
          </columns></TableView>
-      <Button fx:id="button" layoutX="501.0" layoutY="411.0" mnemonicParsing="false" text="Switch to Table" />
+      <Button fx:id="SwitchToTable" layoutX="501.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToTable" text="Switch to Table" />
       <Text layoutX="223.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the weather app!" />
    </children>
 </AnchorPane>

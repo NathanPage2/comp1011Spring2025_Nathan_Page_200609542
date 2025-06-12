@@ -4,21 +4,42 @@ package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
 //The big bar chart
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherChartController {
     @FXML
-    private Button button;
-    //Button that currently does not transfer connection
+    private Button SwitchToTable;
+    //Now it does!
 
+    @FXML
+    public void switchToTable(javafx.event.ActionEvent event) {
+        try {
+            Stage stage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("weather-table-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Table View!");
+            stage.setScene(scene);
+            stage.show();
+            //Creating a new scene and giving it a title
+            //Same way as we do in class
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+            //Catches very basic stuff
+        }
+    }
     @FXML
     private TableColumn<WeatherModel, String> weatherColumn;
 
