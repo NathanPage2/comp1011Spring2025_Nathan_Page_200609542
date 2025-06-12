@@ -1,0 +1,14 @@
+/*Does not seem to work how I want to just added some colors */
+.root{
+    -fx-background-color: #d4fa9b;
+}
+.table-view{
+    -fx-background-color: lightgreen;
+}
+.table-row-cell:odd {
+    -fx-background-color: #b6a4f5;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #f5dfa4;
+}

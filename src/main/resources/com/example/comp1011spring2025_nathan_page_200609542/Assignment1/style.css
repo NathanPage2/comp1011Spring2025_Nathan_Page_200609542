@@ -1,3 +1,4 @@
+/* For some reason it's just not working very well trying to work on it*/
 .root {
     -fx-font-family: Verdana;
     -fx-font-size: 14px;
@@ -6,8 +7,6 @@
 .chart-plot-background {
     -fx-background-color: black;
 }
-
-
 .chart-bar {
     -fx-bar-fill: #f9ef11;
 }
