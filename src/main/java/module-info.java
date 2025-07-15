@@ -5,6 +5,6 @@ module com.example.comp1011spring2025_nathan_page_200609542 {
     requires java.net.http;
     requires com.google.gson;
 
-    opens com.example.comp1011spring2025_nathan_page_200609542 to javafx.fxml, javafx.graphics;
+    opens com.example.comp1011spring2025_nathan_page_200609542 to javafx.fxml, javafx.graphics, com.google.gson;
    exports com.example.comp1011spring2025_nathan_page_200609542;
 }

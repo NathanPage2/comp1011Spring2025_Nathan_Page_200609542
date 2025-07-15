@@ -1,7 +1,10 @@
 package com.example.comp1011spring2025_nathan_page_200609542;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -68,11 +71,29 @@ public class PlayerController {
 
     private void showDetail(Player player) {
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+       /* Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("To Be Implemented");
         alert.setHeaderText("Your turn");
         alert.setContentText("Attempt to set player details on another screen. Open and display this new scene");
         alert.showAndWait();
-
+*/
+        try{
+            Stage stage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("players-views-extended.fxml"));
+           PlayerControllerExtended controller = new PlayerControllerExtended();
+           controller.setPlayer(player);
+           fxmlLoader.setController(controller);
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error!");
+            alert.setHeaderText("Could not load!");
+            alert.setContentText("We failed to load this file!");
+            alert.show();
+        }
     }
 }
