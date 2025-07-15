@@ -1,3 +1,4 @@
+/*
 package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
 //Done by Nathan Page(200609542)
 //June 12th, 2025
@@ -16,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
-import java.sql.*;
+//import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,4 +114,4 @@ public class WeatherChartController {
         }
     }
     }
-
+*/

@@ -2,12 +2,12 @@
 //June 12, 2025
 //Constructor and empty getters and setters page
 package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
-import java.sql.Time;
-public class WeatherModel {
+//import java.sql.Time;
+/*public class WeatherModel {
 
     private int id;
 private String city;
-private Time timeDay;
+//private Time timeDay;
 private double temperature;
 private String weather;
 private String specialNotes;
@@ -65,3 +65,4 @@ public WeatherModel(int id, String city, Time timeDay, double temperature, Strin
     }
 }
 
+*/

@@ -1,3 +1,4 @@
+/*
 package com.example.comp1011spring2025_nathan_page_200609542.Assignment1;
 //Done by Nathan Page (200609542)
 //June 12th 2025
@@ -8,6 +9,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -91,3 +93,5 @@ public class WeatherTableController {
         //Closing list
     }
 }
+
+ */
